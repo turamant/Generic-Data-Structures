@@ -6,16 +6,25 @@ import (
 	
 )
 
-
+type Student struct {
+	Name string
+	ID int
+	Age float64
+}
 
 
 func addStudent(students []string, student string) []string{
 	return append(students, student)
 } 
 
-func addStudentID(studentsID []int, studentID int) []int {
-	return append(studentsID, studentID)
+func addStudentID(students []int, student int) []int {
+	return append(students, student)
 }
+
+func addStudentStruct(students []Student, student Student) []Student {
+	return append(students, student)
+}
+
 
 func main(){
 	var students = make([]string, 0)
@@ -30,4 +39,10 @@ func main(){
 	studentsID = addStudentID(studentsID, 113)
 	studentsID = addStudentID(studentsID, 115)
 	fmt.Println(studentsID)
+
+	studentsStruct := []Student{}
+	studentsStruct = append(studentsStruct, Student{Name: "Ivan", ID: 101, Age: 21.0})
+	studentsStruct = append(studentsStruct, Student{Name: "Petrov", ID: 102, Age: 23.5})
+	studentsStruct = append(studentsStruct, Student{Name: "Sidorov", ID: 105, Age: 19.0})
+	fmt.Println(studentsStruct)
 }
