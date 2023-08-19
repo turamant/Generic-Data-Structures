@@ -13,8 +13,8 @@ func addStudent(students []string, student string) []string{
 	return append(students, student)
 } 
 
-func addStudentID(studentsID []int, studentID int) []int {
-	return append(studentsID, studentID)
+func addStudentID(students []int, studentID int) []int {
+	return append(students, studentID)
 }
 
 func main(){
